@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ФОП Голобородько В.І.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+            rel="stylesheet" />
+    <link rel="stylesheet" href="./sass/main.css" />
+</head>
+<body>
+<header class="page-header">
+    <!-- Навигация на другие страницы  -->
+    <div class="container nav">
+        <nav class="nav">
+            <a class="logo" href="./index.html" lang="en">
+                <img src="images/logo-placeholder-image.png" class="logo__pic" alt="logo">
+            </a>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link current" href="./index.html">Головна
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Послуги
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Контакти
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Связь с нами  -->
+        <ul class="connect__list">
+            <li class="connect__item ">
+                <a class="connect__link" href="maito:goloborodko@ukr.net" lang="en">
+                    <svg class="connect__icons">
+                        <use href="./images/icons.svg#icon-envelope" width="16" height="16"></use>
+                    </svg>
+                    goloborodko@ukr.net
+                </a>
+            </li>
+            <li class="connect__item ">
+                <a class="connect__link" href="tel:+380977777777">
+                    <svg class="connect__icons">
+                        <use href="./images/icons.svg#icon-smartphone" width="16" height="16"></use>
+                    </svg>
+                    +38 097 777 77 77
+                </a>
+            </li>
+        </ul>
+        <button type="button" class="menu__open">
+            <svg class="menu__open__btn" data-mobile-menu-open>
+                <use href="./images/icons.svg#icon-mob-menu-btn" width="24" height="16"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="mobile-menu is-hidden" data-mobile-menu>
+        <div class="container">
+            <button type="button" class="menu__close">
+                <svg class="menu__close__btn" data-mobile-menu-close>
+                    <use href="./images/icons.svg#icon-close_mob_menu" width="19" height="19"></use>
+                </svg>
+            </button>
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                    <a href="./index.html" class="mobile-menu__link">Головна</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#" class="mobile-menu__link">Послуги</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#" class="mobile-menu__link">Контакти</a>
+                </li>
+            </ul>
+            <div class="mobile-menu__bottom">
+                <ul class="mobile-contacts__list">
+                    <li class="mobile-contacts__item">
+                        <a href="tel:+380961111111" class="mobile-contacts__link mobile-contacts__link--big">+38 096 111
+                            11 11</a>
+                    </li>
+                    <li class="mobile-contacts__item">
+                        <a href="maito:info@devstudio.com" class="mobile-contacts__link">info@devstudio.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Основной баннер -->
+<main>
+    <section class="hero">
+        <div class="container">
+            <div class="about">
+                <img src="images/goloborodko-mob.jpg" alt="owner" width="340">
+                    <h1 class="hero__title">
+                        ФОП Голобородько В.І. </br> Екологічна консультація профільного спеціаліста.
+                    </h1>
+            </div>
+
+        </div>
+    </section>
+    <div class="form-container">
+        <h2>Напишіть мені</h2>
+        <form id="contactForm" method="POST" action="https://api.web3forms.com/submit">
+            <!-- Access Key для Web3Forms -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+    
+            <!-- Поле Имя -->
+            <label for="name">Ім'я</label>
+            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+    
+            <!-- Поле Телефон -->
+            <label for="phone">Телефон</label>
+            <input type="text" id="phone" name="phone" placeholder="Ваш телефон" required>
+    
+            <!-- Поле Email -->
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Ваш e-mail" required>
+    
+            <!-- Поле Сообщение -->
+            <label for="message">Повідомлення</label>
+            <textarea id="message" name="message" placeholder="Ваше повідомлення" rows="5" required></textarea>
+    
+            <!-- Кнопка Отправить -->
+            <button type="submit">Відправити</button>
+        </form>
+        <div id="responseMessage" class="response"></div>
+    </div>
+
+</main>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/form-sender.js"></script>
+</body>
+</html>
