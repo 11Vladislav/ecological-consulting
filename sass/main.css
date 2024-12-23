@@ -597,11 +597,32 @@ address {
   .about {
     display: flex;
     align-items: center;
+    justify-items: start;
+  }
+}
+
+.hero__title--main {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  .hero__title--main {
+    display: block;
+    margin-bottom: 25px;
+  }
+}
+
+.hero__title--desktop {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title--desktop {
+    display: block;
   }
 }
 
 .hero__title {
   max-width: 360px;
+  margin-top: 25px;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
@@ -657,7 +678,7 @@ button:hover {
   color: green;
 }
 
-.form-container {
+.form {
   margin-top: 25px;
   display: flex;
   align-items: center;

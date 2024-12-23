@@ -25,12 +25,29 @@
     @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
+    justify-items: start;
     }
+}
+
+.hero__title--main{
+    display: none;
+    @media screen and (max-width: 1200px) {
+        display: block;
+        margin-bottom: 25px;
+    }
+}
+
+.hero__title--desktop{
+    display: none;
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
+
 }
 
 .hero__title {
     max-width: 360px;
-    
+    margin-top: 25px;
     font-weight: 900;
     font-size: 26px;
     line-height: 1.62;
